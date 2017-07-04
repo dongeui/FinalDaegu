@@ -1,0 +1,247 @@
+fileFormatVersion: 2
+guid: 4fdf21daa1fb7ef409f6035db5f2e1bf
+timeCreated: 1498528475
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Crab
+    100002: CrabHub
+    100004: CrabHubBone001
+    100006: CrabHubBone002
+    100008: CrabLArm1
+    100010: CrabLArm2
+    100012: CrabLArm3
+    100014: CrabLArmPalm
+    100016: CrabLLeg11
+    100018: CrabLLeg12
+    100020: CrabLLeg13
+    100022: CrabLLeg1Platform
+    100024: CrabLLeg21
+    100026: CrabLLeg22
+    100028: CrabLLeg23
+    100030: CrabLLeg2Platform
+    100032: CrabLLeg31
+    100034: CrabLLeg32
+    100036: CrabLLeg33
+    100038: CrabLLeg3Platform
+    100040: CrabRArm1
+    100042: CrabRArm2
+    100044: CrabRArm3
+    100046: CrabRArmPalm
+    100048: CrabRLeg1
+    100050: CrabRLeg1 1
+    100052: CrabRLeg1 2
+    100054: CrabRLeg2
+    100056: CrabRLeg2 1
+    100058: CrabRLeg2 2
+    100060: CrabRLeg3
+    100062: CrabRLeg3 1
+    100064: CrabRLeg3 2
+    100066: CrabRLegPlatform
+    100068: CrabRLegPlatform 1
+    100070: CrabRLegPlatform 2
+    100072: CrabTail1
+    100074: CrabTail2
+    100076: CrabTail3
+    100078: CrabTail4
+    100080: CrabTail5
+    100082: CrabTail6
+    100084: LLeg1Print 1
+    100086: LLeg1Print 2
+    100088: LLeg1Print 3
+    100090: LLeg1Print 4
+    100092: LLeg1Print 5
+    100094: LLeg1Print 6
+    100096: LLeg2Print 1
+    100098: LLeg2Print 2
+    100100: LLeg2Print 3
+    100102: LLeg2Print 4
+    100104: LLeg2Print 5
+    100106: LLeg2Print 6
+    100108: LLeg3Print 0
+    100110: LLeg3Print 1
+    100112: LLeg3Print 2
+    100114: LLeg3Print 3
+    100116: LLeg3Print 4
+    100118: LLeg3Print 5
+    100120: LLeg3Print 6
+    100122: Point001
+    100124: RLegPrint 0
+    100126: RLegPrint 1
+    100128: RLegPrint 1 1
+    100130: RLegPrint 1 2
+    100132: RLegPrint 2
+    100134: RLegPrint 2 1
+    100136: RLegPrint 2 2
+    100138: RLegPrint 3
+    100140: RLegPrint 3 1
+    100142: RLegPrint 3 2
+    100144: RLegPrint 4
+    100146: RLegPrint 4 1
+    100148: RLegPrint 4 2
+    100150: RLegPrint 5
+    100152: RLegPrint 5 1
+    100154: RLegPrint 5 2
+    100156: RLegPrint 6
+    100158: RLegPrint 6 1
+    100160: RLegPrint 6 2
+    100162: scorpion
+    100164: //RootNode
+    400000: Crab
+    400002: CrabHub
+    400004: CrabHubBone001
+    400006: CrabHubBone002
+    400008: CrabLArm1
+    400010: CrabLArm2
+    400012: CrabLArm3
+    400014: CrabLArmPalm
+    400016: CrabLLeg11
+    400018: CrabLLeg12
+    400020: CrabLLeg13
+    400022: CrabLLeg1Platform
+    400024: CrabLLeg21
+    400026: CrabLLeg22
+    400028: CrabLLeg23
+    400030: CrabLLeg2Platform
+    400032: CrabLLeg31
+    400034: CrabLLeg32
+    400036: CrabLLeg33
+    400038: CrabLLeg3Platform
+    400040: CrabRArm1
+    400042: CrabRArm2
+    400044: CrabRArm3
+    400046: CrabRArmPalm
+    400048: CrabRLeg1
+    400050: CrabRLeg1 1
+    400052: CrabRLeg1 2
+    400054: CrabRLeg2
+    400056: CrabRLeg2 1
+    400058: CrabRLeg2 2
+    400060: CrabRLeg3
+    400062: CrabRLeg3 1
+    400064: CrabRLeg3 2
+    400066: CrabRLegPlatform
+    400068: CrabRLegPlatform 1
+    400070: CrabRLegPlatform 2
+    400072: CrabTail1
+    400074: CrabTail2
+    400076: CrabTail3
+    400078: CrabTail4
+    400080: CrabTail5
+    400082: CrabTail6
+    400084: LLeg1Print 1
+    400086: LLeg1Print 2
+    400088: LLeg1Print 3
+    400090: LLeg1Print 4
+    400092: LLeg1Print 5
+    400094: LLeg1Print 6
+    400096: LLeg2Print 1
+    400098: LLeg2Print 2
+    400100: LLeg2Print 3
+    400102: LLeg2Print 4
+    400104: LLeg2Print 5
+    400106: LLeg2Print 6
+    400108: LLeg3Print 0
+    400110: LLeg3Print 1
+    400112: LLeg3Print 2
+    400114: LLeg3Print 3
+    400116: LLeg3Print 4
+    400118: LLeg3Print 5
+    400120: LLeg3Print 6
+    400122: Point001
+    400124: RLegPrint 0
+    400126: RLegPrint 1
+    400128: RLegPrint 1 1
+    400130: RLegPrint 1 2
+    400132: RLegPrint 2
+    400134: RLegPrint 2 1
+    400136: RLegPrint 2 2
+    400138: RLegPrint 3
+    400140: RLegPrint 3 1
+    400142: RLegPrint 3 2
+    400144: RLegPrint 4
+    400146: RLegPrint 4 1
+    400148: RLegPrint 4 2
+    400150: RLegPrint 5
+    400152: RLegPrint 5 1
+    400154: RLegPrint 5 2
+    400156: RLegPrint 6
+    400158: RLegPrint 6 1
+    400160: RLegPrint 6 2
+    400162: scorpion
+    400164: //RootNode
+    4300000: scorpion
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: scorpion
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

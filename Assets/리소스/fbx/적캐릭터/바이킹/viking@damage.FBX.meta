@@ -1,0 +1,182 @@
+fileFormatVersion: 2
+guid: 054c7967fc9d8ed4985e5e9db48632da
+timeCreated: 1498528467
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: ' 1'
+    100002: Bip001 Head002
+    100004: Bip001 HeadNub002
+    100006: Bip001 L Calf002
+    100008: Bip001 L Clavicle002
+    100010: Bip001 L Finger004
+    100012: Bip001 L Finger005
+    100014: Bip001 L Finger0Nub002
+    100016: Bip001 L Finger1Nub002
+    100018: Bip001 L Foot002
+    100020: Bip001 L Forearm002
+    100022: Bip001 L Hand002
+    100024: Bip001 L Thigh002
+    100026: Bip001 L Toe006
+    100028: Bip001 L Toe007
+    100030: Bip001 L Toe008
+    100032: Bip001 L Toe0Nub002
+    100034: Bip001 L UpperArm002
+    100036: Bip001 Neck002
+    100038: Bip001 Pelvis002
+    100040: Bip001 R Calf002
+    100042: Bip001 R Clavicle002
+    100044: Bip001 R Finger004
+    100046: Bip001 R Finger005
+    100048: Bip001 R Finger0Nub002
+    100050: Bip001 R Finger1Nub002
+    100052: Bip001 R Foot002
+    100054: Bip001 R Forearm002
+    100056: Bip001 R Hand002
+    100058: Bip001 R Thigh002
+    100060: Bip001 R Toe006
+    100062: Bip001 R Toe007
+    100064: Bip001 R Toe008
+    100066: Bip001 R Toe0Nub002
+    100068: Bip001 R UpperArm002
+    100070: Bip001 Spine008
+    100072: Bip001 Spine009
+    100074: Bip001 Spine010
+    100076: Bip001 Spine011
+    100078: Bip003
+    100080: //RootNode
+    100082: viking_body
+    100084: viking_Face
+    100086: viking_hammer
+    100088: viking_sd
+    400000: ' 1'
+    400002: Bip001 Head002
+    400004: Bip001 HeadNub002
+    400006: Bip001 L Calf002
+    400008: Bip001 L Clavicle002
+    400010: Bip001 L Finger004
+    400012: Bip001 L Finger005
+    400014: Bip001 L Finger0Nub002
+    400016: Bip001 L Finger1Nub002
+    400018: Bip001 L Foot002
+    400020: Bip001 L Forearm002
+    400022: Bip001 L Hand002
+    400024: Bip001 L Thigh002
+    400026: Bip001 L Toe006
+    400028: Bip001 L Toe007
+    400030: Bip001 L Toe008
+    400032: Bip001 L Toe0Nub002
+    400034: Bip001 L UpperArm002
+    400036: Bip001 Neck002
+    400038: Bip001 Pelvis002
+    400040: Bip001 R Calf002
+    400042: Bip001 R Clavicle002
+    400044: Bip001 R Finger004
+    400046: Bip001 R Finger005
+    400048: Bip001 R Finger0Nub002
+    400050: Bip001 R Finger1Nub002
+    400052: Bip001 R Foot002
+    400054: Bip001 R Forearm002
+    400056: Bip001 R Hand002
+    400058: Bip001 R Thigh002
+    400060: Bip001 R Toe006
+    400062: Bip001 R Toe007
+    400064: Bip001 R Toe008
+    400066: Bip001 R Toe0Nub002
+    400068: Bip001 R UpperArm002
+    400070: Bip001 Spine008
+    400072: Bip001 Spine009
+    400074: Bip001 Spine010
+    400076: Bip001 Spine011
+    400078: Bip003
+    400080: //RootNode
+    400082: viking_body
+    400084: viking_Face
+    400086: viking_hammer
+    400088: viking_sd
+    2300000: ' 1'
+    2300002: viking_Face
+    2300004: viking_hammer
+    2300006: viking_sd
+    3300000: ' 1'
+    3300002: viking_Face
+    3300004: viking_hammer
+    3300006: viking_sd
+    4300000: viking_body
+    4300002: viking_Face
+    4300006: viking_sd
+    4300008: viking_hammer
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: viking_body
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

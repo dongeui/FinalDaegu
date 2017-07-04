@@ -1,0 +1,315 @@
+fileFormatVersion: 2
+guid: 9e04a4b0ba23c3b4491f31b5126d92b6
+timeCreated: 1498528480
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Cylinder001
+    100002: LLeg1Print 1
+    100004: LLeg1Print 2
+    100006: LLeg1Print 3
+    100008: LLeg1Print 4
+    100010: LLeg1Print 5
+    100012: LLeg1Print 6
+    100014: LLeg2Print 1
+    100016: LLeg2Print 2
+    100018: LLeg2Print 3
+    100020: LLeg2Print 4
+    100022: LLeg2Print 5
+    100024: LLeg2Print 6
+    100026: LLeg3Print 0
+    100028: LLeg3Print 1
+    100030: LLeg3Print 2
+    100032: LLeg3Print 3
+    100034: LLeg3Print 4
+    100036: LLeg3Print 5
+    100038: LLeg3Print 6
+    100040: Point001
+    100042: RLeg1Print 1
+    100044: RLeg1Print 2
+    100046: RLeg1Print 3
+    100048: RLeg1Print 4
+    100050: RLeg1Print 5
+    100052: RLeg1Print 6
+    100054: RLeg2Print 0
+    100056: RLeg2Print 1
+    100058: RLeg2Print 2
+    100060: RLeg2Print 3
+    100062: RLeg2Print 4
+    100064: RLeg2Print 5
+    100066: RLeg2Print 6
+    100068: RLeg3Print 0
+    100070: RLeg3Print 1
+    100072: RLeg3Print 2
+    100074: RLeg3Print 3
+    100076: RLeg3Print 4
+    100078: RLeg3Print 5
+    100080: RLeg3Print 6
+    100082: Sphere002
+    100084: Sphere003
+    100086: Spider
+    100088: Spider001
+    100090: Spider001 1
+    100092: Spider001 2
+    100094: Spider001 3
+    100096: Spider001Hub
+    100098: Spider001LLeg11
+    100100: Spider001LLeg12
+    100102: Spider001LLeg13
+    100104: Spider001LLeg1Platform
+    100106: Spider001LLeg21
+    100108: Spider001LLeg22
+    100110: Spider001LLeg23
+    100112: Spider001LLeg2Platform
+    100114: Spider001LLeg31
+    100116: Spider001LLeg32
+    100118: Spider001LLeg33
+    100120: Spider001LLeg3Platform
+    100122: Spider001LLeg41
+    100124: Spider001LLeg42
+    100126: Spider001LLeg43
+    100128: Spider001LLeg4Platform
+    100130: Spider001RLeg11
+    100132: Spider001RLeg12
+    100134: Spider001RLeg13
+    100136: Spider001RLeg1Platform
+    100138: Spider001RLeg21
+    100140: Spider001RLeg22
+    100142: Spider001RLeg23
+    100144: Spider001RLeg2Platform
+    100146: Spider001RLeg31
+    100148: Spider001RLeg32
+    100150: Spider001RLeg33
+    100152: Spider001RLeg3Platform
+    100154: Spider001RLeg41
+    100156: Spider001RLeg42
+    100158: Spider001RLeg43
+    100160: Spider001RLeg4Platform
+    100162: //RootNode
+    100164: SpiderHub
+    100166: SpiderHub001
+    100168: SpiderHubBone001
+    100170: SpiderHubBone002
+    100172: SpiderLLeg11
+    100174: SpiderLLeg12
+    100176: SpiderLLeg13
+    100178: SpiderLLeg1Platform
+    100180: SpiderLLeg21
+    100182: SpiderLLeg22
+    100184: SpiderLLeg23
+    100186: SpiderLLeg2Platform
+    100188: SpiderLLeg31
+    100190: SpiderLLeg32
+    100192: SpiderLLeg33
+    100194: SpiderLLeg3Platform
+    100196: SpiderRLeg11
+    100198: SpiderRLeg12
+    100200: SpiderRLeg13
+    100202: SpiderRLeg1Platform
+    100204: SpiderRLeg21
+    100206: SpiderRLeg22
+    100208: SpiderRLeg23
+    100210: SpiderRLeg2Platform
+    100212: SpiderRLeg31
+    100214: SpiderRLeg32
+    100216: SpiderRLeg33
+    100218: SpiderRLeg3Platform
+    100220: SpiderSpine1
+    100222: SpiderSpine2
+    100224: SpiderSpine3
+    100226: SpiderSpine4
+    400000: Cylinder001
+    400002: LLeg1Print 1
+    400004: LLeg1Print 2
+    400006: LLeg1Print 3
+    400008: LLeg1Print 4
+    400010: LLeg1Print 5
+    400012: LLeg1Print 6
+    400014: LLeg2Print 1
+    400016: LLeg2Print 2
+    400018: LLeg2Print 3
+    400020: LLeg2Print 4
+    400022: LLeg2Print 5
+    400024: LLeg2Print 6
+    400026: LLeg3Print 0
+    400028: LLeg3Print 1
+    400030: LLeg3Print 2
+    400032: LLeg3Print 3
+    400034: LLeg3Print 4
+    400036: LLeg3Print 5
+    400038: LLeg3Print 6
+    400040: Point001
+    400042: RLeg1Print 1
+    400044: RLeg1Print 2
+    400046: RLeg1Print 3
+    400048: RLeg1Print 4
+    400050: RLeg1Print 5
+    400052: RLeg1Print 6
+    400054: RLeg2Print 0
+    400056: RLeg2Print 1
+    400058: RLeg2Print 2
+    400060: RLeg2Print 3
+    400062: RLeg2Print 4
+    400064: RLeg2Print 5
+    400066: RLeg2Print 6
+    400068: RLeg3Print 0
+    400070: RLeg3Print 1
+    400072: RLeg3Print 2
+    400074: RLeg3Print 3
+    400076: RLeg3Print 4
+    400078: RLeg3Print 5
+    400080: RLeg3Print 6
+    400082: Sphere002
+    400084: Sphere003
+    400086: Spider
+    400088: Spider001
+    400090: Spider001 1
+    400092: Spider001 2
+    400094: Spider001 3
+    400096: Spider001Hub
+    400098: Spider001LLeg11
+    400100: Spider001LLeg12
+    400102: Spider001LLeg13
+    400104: Spider001LLeg1Platform
+    400106: Spider001LLeg21
+    400108: Spider001LLeg22
+    400110: Spider001LLeg23
+    400112: Spider001LLeg2Platform
+    400114: Spider001LLeg31
+    400116: Spider001LLeg32
+    400118: Spider001LLeg33
+    400120: Spider001LLeg3Platform
+    400122: Spider001LLeg41
+    400124: Spider001LLeg42
+    400126: Spider001LLeg43
+    400128: Spider001LLeg4Platform
+    400130: Spider001RLeg11
+    400132: Spider001RLeg12
+    400134: Spider001RLeg13
+    400136: Spider001RLeg1Platform
+    400138: Spider001RLeg21
+    400140: Spider001RLeg22
+    400142: Spider001RLeg23
+    400144: Spider001RLeg2Platform
+    400146: Spider001RLeg31
+    400148: Spider001RLeg32
+    400150: Spider001RLeg33
+    400152: Spider001RLeg3Platform
+    400154: Spider001RLeg41
+    400156: Spider001RLeg42
+    400158: Spider001RLeg43
+    400160: Spider001RLeg4Platform
+    400162: //RootNode
+    400164: SpiderHub
+    400166: SpiderHub001
+    400168: SpiderHubBone001
+    400170: SpiderHubBone002
+    400172: SpiderLLeg11
+    400174: SpiderLLeg12
+    400176: SpiderLLeg13
+    400178: SpiderLLeg1Platform
+    400180: SpiderLLeg21
+    400182: SpiderLLeg22
+    400184: SpiderLLeg23
+    400186: SpiderLLeg2Platform
+    400188: SpiderLLeg31
+    400190: SpiderLLeg32
+    400192: SpiderLLeg33
+    400194: SpiderLLeg3Platform
+    400196: SpiderRLeg11
+    400198: SpiderRLeg12
+    400200: SpiderRLeg13
+    400202: SpiderRLeg1Platform
+    400204: SpiderRLeg21
+    400206: SpiderRLeg22
+    400208: SpiderRLeg23
+    400210: SpiderRLeg2Platform
+    400212: SpiderRLeg31
+    400214: SpiderRLeg32
+    400216: SpiderRLeg33
+    400218: SpiderRLeg3Platform
+    400220: SpiderSpine1
+    400222: SpiderSpine2
+    400224: SpiderSpine3
+    400226: SpiderSpine4
+    2300000: Sphere002
+    2300002: Sphere003
+    3300000: Sphere002
+    3300002: Sphere003
+    4300000: Cylinder001
+    4300002: Sphere002
+    4300004: Sphere003
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Cylinder001
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
