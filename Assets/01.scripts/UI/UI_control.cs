@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class UI_control : MonoBehaviour
 {
     static public UI_control Instance;
-
+    public GameObject TargetCam;
     public Slider HP_bar;
     private Text coin_txt;
     private Text score_txt;
@@ -28,6 +28,12 @@ public class UI_control : MonoBehaviour
         CoinCount = 0;
     }
 
+    // Update is called once per frame
+    private void Update()
+    {
+        transform.LookAt(TargetCam.transform);
+    }
+
     //UI 컨트롤러에서 활용할 컴포넌트들을 참조한다.
     private void Find_components()
     {
@@ -43,11 +49,6 @@ public class UI_control : MonoBehaviour
         HP_bar.maxValue = Player_health.Instance.HP_max;
         HP_bar.minValue = 0f;
         HP_bar.value = Player_health.Instance.HP_now;
-    }
-
-    // Update is called once per frame
-    private void Update()
-    {
     }
 
     public void CoinCountUpdate()
