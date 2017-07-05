@@ -75,7 +75,7 @@ public class UFO_Start_spwan : MonoBehaviour {
         Debug.Log("원래 위치로 돌아가야 한다");
         while (true)
         {
-            child.localPosition = Vector3.Lerp(child.localPosition, Vector3.zero, 3f * Time.deltaTime);
+            child.localPosition = Vector3.Lerp(child.localPosition, Vector3.zero, 2f * Time.deltaTime);
 
             if (Vector3.Distance(child.localPosition, Vector3.zero) <0.1f)
             {
