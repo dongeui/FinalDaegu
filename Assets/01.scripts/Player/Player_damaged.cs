@@ -6,10 +6,12 @@ public class Player_damaged : MonoBehaviour {
 
     Transform[] player_pos;
     static public Player_damaged Instance;
+    Effect_control effect_control;
     
 
     private void Awake()
     {
+        effect_control = GetComponent<Effect_control>();
         Instance = this;
     }
 
@@ -17,6 +19,7 @@ public class Player_damaged : MonoBehaviour {
     // Use this for initialization
     void Start () {
         player_pos = new Transform[2];
+        effect_control.Set_transform(0, gameObject.transform.position);
         player_pos[0] = GameObject.FindGameObjectWithTag("Track01").transform;
         player_pos[1] = GameObject.FindGameObjectWithTag("Track02").transform;
     }
@@ -38,6 +41,7 @@ public class Player_damaged : MonoBehaviour {
             //데미지 만큼 플레이어의 체력을 깎는다.
             Player_health.Instance.HP_now -= damage;
             UI_control.Instance.HP_bar.value = Player_health.Instance.HP_now;
+            
 
             //플레이어의 체력이 0보다 작다면 사망...
             if (Player_health.Instance.HP_now <=0)
@@ -48,6 +52,7 @@ public class Player_damaged : MonoBehaviour {
 
             //데미지 애니메이션 재생
             Player_ani.Instance.Damage_anim();
+            effect_control.Show_effect(0);
 
             //약간 뒤로 밀리는 모션과 잠시 무적시간 부여
             StopCoroutine(Knockback());
@@ -93,6 +98,7 @@ public class Player_damaged : MonoBehaviour {
                 Player_control.Instance.IsImmortal = false;
                 Player_ani.Instance.Immortal_anim(false);
                 Debug.Log("뒤로 밀렸다가 제위치 확보");
+                effect_control.Hide_effect(0);
                 break;
             }
             yield return null;

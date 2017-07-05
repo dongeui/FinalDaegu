@@ -76,6 +76,9 @@
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
+    <Reference Include="Mono.Cecil">
+      <HintPath>Library\UnityAssemblies\Mono.Cecil.dll</HintPath>
+    </Reference>
     <Reference Include="DOTween">
       <HintPath>Assets\Demigiant\DOTween\DOTween.dll</HintPath>
     </Reference>
@@ -97,10 +100,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\01.scripts\DestroyZone.cs" />
+    <Compile Include="Assets\01.scripts\Effect_control.cs" />
+    <Compile Include="Assets\01.scripts\Enemy\A10\A10.cs" />
     <Compile Include="Assets\01.scripts\Enemy\All\Enemy_ani.cs" />
     <Compile Include="Assets\01.scripts\Enemy\All\Enemy_attack.cs" />
     <Compile Include="Assets\01.scripts\Enemy\All\Enemy_control.cs" />
     <Compile Include="Assets\01.scripts\Enemy\Bonecrab\Bonecrab_special.cs" />
+    <Compile Include="Assets\01.scripts\Enemy\Bonecrab\WaterBall.cs" />
     <Compile Include="Assets\01.scripts\Enemy\Boomberman\Bommberman_special.cs" />
     <Compile Include="Assets\01.scripts\Enemy\UFO_Boss\UFO_Boss_ani.cs" />
     <Compile Include="Assets\01.scripts\Enemy\UFO_Boss\UFO_Boss_control.cs" />
@@ -118,6 +124,20 @@
     <Compile Include="Assets\BGControl.cs" />
     <Compile Include="Assets\Demigiant\DOTween\Examples\Basics.cs" />
     <Compile Include="Assets\Demigiant\DOTween\Examples\Sequences.cs" />
+    <Compile Include="Assets\FX\DAX\Editor Extensions\Particle Scaler Tool\DAX_ParticleScaler.cs" />
+    <Compile Include="Assets\FX\DAX\Magic Packs Vol1\Demo MP V1\Balls_Moving_SC.cs" />
+    <Compile Include="Assets\FX\DAX\Magic Packs Vol1\Demo MP V1\DAX_CameraControl_V2_1_00XDFG.cs" />
+    <Compile Include="Assets\FX\DAX\Magic Packs Vol1\Demo MP V1\DAX_MainCamera_V1_r2_00XDFG.cs" />
+    <Compile Include="Assets\FX\DAX\Magic Packs Vol1\Scripts\DAX_Auto_Destructor_00XDFG.cs" />
+    <Compile Include="Assets\FX\DAX\Magic Packs Vol1\Scripts\DAX_PP_Collapse_Full.cs" />
+    <Compile Include="Assets\FX\DAX\Magic Packs Vol1\Scripts\DAX_PP_Collapse_LPart.cs" />
+    <Compile Include="Assets\FX\DAX\Magic Packs Vol1\Scripts\DAX_PP_Collapse_LPart_Inv.cs" />
+    <Compile Include="Assets\FX\DAX\Magic Packs Vol1\Scripts\DAX_PP_Gravity_L1.cs" />
+    <Compile Include="Assets\FX\DAX\Magic Packs Vol1\Scripts\DAX_Rotator_XYZ_EA.cs" />
+    <Compile Include="Assets\FX\DAX\Shields Collection\Demo V1\Scripts\DAX_CameraControl.cs" />
+    <Compile Include="Assets\FX\DAX\Shields Collection\Demo V1\Scripts\DAX_MainCamera.cs" />
+    <Compile Include="Assets\FX\DAX\Shields Collection\Scripts\DAX_Rotator.cs" />
+    <Compile Include="Assets\FX\DAX\Shields Collection\Scripts\DAX_Rotator_XYZ.cs" />
     <Compile Include="Assets\JMO Assets\MatCap Shaders\Demo\Assets\MC_AutoRotate.cs" />
     <Compile Include="Assets\JMO Assets\MatCap Shaders\Demo\Assets\MC_SwitchTexture.cs" />
   </ItemGroup>
@@ -128,6 +148,10 @@
     <None Include="Assets\Demigiant\DOTween\DOTween50.xml" />
     <None Include="Assets\Demigiant\DOTween\Editor\DOTweenEditor.XML" />
     <None Include="Assets\Demigiant\DOTween\readme.txt" />
+    <None Include="Assets\FX\DAX\Magic Packs Vol1\Materials\FBX\DAX_Fire_Wrap_ADD.shader" />
+    <None Include="Assets\FX\DAX\Magic Packs Vol1\Materials\FBX\DAX_Fire_Wrap_BLEND.shader" />
+    <None Include="Assets\FX\DAX\Magic Packs Vol1\Materials\FBX\DAX_Unlit_Colored_Diffuse.shader" />
+    <None Include="Assets\FX\DAX\Shields Collection\Shaders\DAX_AlphaBlend+Add.shader" />
     <None Include="Assets\JMO Assets\!JMO Assets Readme.txt" />
     <None Include="Assets\JMO Assets\MatCap Shaders\Shaders\MatCap_Lit.shader" />
     <None Include="Assets\JMO Assets\MatCap Shaders\Shaders\MatCap_Plain.shader" />

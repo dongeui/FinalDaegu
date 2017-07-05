@@ -15,6 +15,7 @@ public class UFO_Boss_control : MonoBehaviour
     bool Changing;
     bool IsAlive;
     public bool IsImmortal;
+    public Effect_control effect_control;
 
     private void Awake()
     {
@@ -22,6 +23,7 @@ public class UFO_Boss_control : MonoBehaviour
         IsAlive = true;
         Track_boss = "Track01";
         IsImmortal = true;
+        effect_control = GetComponent<Effect_control>();
     }
 
     public void Start()
@@ -122,7 +124,8 @@ public class UFO_Boss_control : MonoBehaviour
         {
             //무기(collision)에서 무기데미지가져와서 BossLife에서 빼서 일정넘어가면 Destroy불러버림
             //이 자리에 hitparticle  재생되게 만들어야함
-
+            
+           
             //부딫힌 무기를 관리하는 클래스를 참조한다
             Weapon weapon = other.gameObject.GetComponent<Weapon>();
 
@@ -131,13 +134,17 @@ public class UFO_Boss_control : MonoBehaviour
 
             //무기의 공격력 만큼 보스의 체력을 깍는다.
             BossLife -= weapon.attack_point;
-
+            effect_control.effects[0].transform.position = other.transform.position;
+            effect_control.Show_effect(0);
+                
             //체력이 떨어 져서 사망...
             if (BossLife <= 0)
             {
                 Destroy(gameObject.transform.parent.gameObject, 5f);
                 IsAlive = false;
                 UFO_Start_spwan.Instance.Boss_Die();
+                effect_control.effects[0].transform.DetachChildren();
+
             }
 
             //죽지는 않고 데미지만 입었다. 임시 무적
@@ -145,6 +152,7 @@ public class UFO_Boss_control : MonoBehaviour
             {
                 Debug.Log("보스가 아파합니다.");
                 UFO_Boss_ani.Instance.Damaged();
+                
             }
 
             //보스와 부딫힌 무기는 사망...

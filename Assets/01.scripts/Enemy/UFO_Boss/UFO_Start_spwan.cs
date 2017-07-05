@@ -15,9 +15,9 @@ public class UFO_Start_spwan : MonoBehaviour {
 
     private void Awake()
     {
-        ani = GetComponentInChildren<UFO_Boss_ani>();
         IsPossible = true;
         Instance = this;
+        ani = GetComponentInChildren<UFO_Boss_ani>();
         animator = GetComponent<Animator>();
     }
 

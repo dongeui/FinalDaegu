@@ -12,6 +12,7 @@ public class Enemy_control : MonoBehaviour
     public Rigidbody rigidbody;
     public Collider[] colls;
     public Enemy_attack enemy_attack;
+    public Effect_control effect_control;
     
 
     private void Awake()
@@ -28,6 +29,7 @@ public class Enemy_control : MonoBehaviour
         rigidbody = GetComponent<Rigidbody>();
         colls = GetComponents<Collider>();
         enemy_attack = GetComponent<Enemy_attack>();
+        effect_control = GetComponent<Effect_control>();
     }
 
     private void Start()
@@ -115,6 +117,10 @@ public class Enemy_control : MonoBehaviour
 
         health -= weapon.attack_point;
 
+        effect_control.Set_transform(0, gameObject.transform.position);
+        effect_control.Show_effect(0);
+        effect_control.Hide_effect_delay(0, 1f);
+
         if (health <= 0)
         {
             for (int i = 0; i < colls.Length; i++)
@@ -132,6 +138,7 @@ public class Enemy_control : MonoBehaviour
         else
         {
             ani.Enemy_hit_anim();
+            
         }
     }  
 

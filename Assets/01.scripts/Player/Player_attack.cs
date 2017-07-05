@@ -11,15 +11,17 @@ public class Player_attack : MonoBehaviour {
     public Transform[] weapon_checker;
     public Transform weapon_holder;
     GameObject weapon_now;
+    Effect_control effect_control;
 
     private void Awake()
     {
         Instance = this;
     }
 
-    private void start()
+    private void Start()
     {
         weapon_now = new GameObject();
+        effect_control = GetComponent<Effect_control>();
     }
     
     //무기를 들고 있는지 확인해서 다음 행동을 실행한다.
@@ -42,7 +44,7 @@ public class Player_attack : MonoBehaviour {
             Player_ani.Instance.Attack_anim();
             state_weapon = string.Empty;
             StartCoroutine(move(weapon_now, Vector3.right, 30f));
-            weapon_holder.DetachChildren();
+            effect_control.Hide_effect(1);
         }
 
         //무기를 갖고 있지 않음.
@@ -117,7 +119,8 @@ public class Player_attack : MonoBehaviour {
 
         //무기정보가 있는 클래스를 참조한다.
         Weapon weapon = weapon_now.GetComponent<Weapon>();
-        weapon.Holding();        
+        weapon.Holding();
+        effect_control.Show_effect(1);
 
         while (roop)
         {
