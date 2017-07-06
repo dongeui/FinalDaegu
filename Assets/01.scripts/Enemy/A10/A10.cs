@@ -48,7 +48,12 @@ public class A10 : MonoBehaviour {
     IEnumerator Effect_start(float time)
     {
         yield return new WaitForSeconds(time);
-        target.transform.GetChild(0).gameObject.SetActive(true);
+
+        for (int i= 0;i< target.transform.childCount; i++)
+        {
+            target.transform.GetChild(i).gameObject.SetActive(true);
+        }
+
         Destroy(obj);
 
         //그리고 플레이어 사망

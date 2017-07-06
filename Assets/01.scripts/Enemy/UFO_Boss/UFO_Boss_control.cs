@@ -1,12 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
+using UnityEngine.UI;
+     
 
 public class UFO_Boss_control : MonoBehaviour
 {
     public float BossLife = 100f;
-    UFO_Start_spwan start_spwan;    
-   
+    UFO_Start_spwan start_spwan;
+    public Text time_txt;
     public ParticleSystem HitEffect;
     public float speed;
     public static UFO_Boss_control Instance;
@@ -16,6 +19,8 @@ public class UFO_Boss_control : MonoBehaviour
     bool IsAlive;
     public bool IsImmortal;
     public Effect_control effect_control;
+
+    public TimeManager time_manager;
 
     private void Awake()
     {
@@ -29,8 +34,11 @@ public class UFO_Boss_control : MonoBehaviour
     public void Start()
     {
         start_spwan = GetComponentInParent<UFO_Start_spwan>();
+        time_txt.gameObject.SetActive(true);
         StartCoroutine(Check_player());
     }
+
+
 
     //플레이어의 위치에 따라 보스의 위치를 바꾼다.
     IEnumerator Check_player()
@@ -134,17 +142,21 @@ public class UFO_Boss_control : MonoBehaviour
 
             //무기의 공격력 만큼 보스의 체력을 깍는다.
             BossLife -= weapon.attack_point;
+
             effect_control.effects[0].transform.position = other.transform.position;
             effect_control.Show_effect(0);
-                
+
             //체력이 떨어 져서 사망...
             if (BossLife <= 0)
             {
                 Destroy(gameObject.transform.parent.gameObject, 5f);
                 IsAlive = false;
                 UFO_Start_spwan.Instance.Boss_Die();
-                effect_control.effects[0].transform.DetachChildren();
-
+                
+                /*
+                effect_control.effects[0].transform.SetParent(bossPos[0].transform);
+                effect_control.effects[0].transform.localPosition = Vector3.zero;*/
+                //effect_control.effects[0].transform.position = bossPos[0].transform.position;
             }
 
             //죽지는 않고 데미지만 입었다. 임시 무적
@@ -155,11 +167,24 @@ public class UFO_Boss_control : MonoBehaviour
                 
             }
 
-            //보스와 부딫힌 무기는 사망...
+            //보스와 부딫힌 무기는 사망...?
             weapon.coll.enabled = false;
+
+            
         }
     }
 
+
+    //시간이 지나서 뒤로 물러난다.
+    public void GetBack()
+    {
+        StopAllCoroutines();
+        IsImmortal = true;
+        UFO_Start_spwan.Instance.IsPossible = false;
+        Sequence sequence = DOTween.Sequence();
+        sequence.Append(transform.DOMove(bossPos[2].transform.position, 5f));
+        Destroy(gameObject.transform.parent.gameObject, 5f);
+    }
     
 
     public void Start_drop()
@@ -171,4 +196,10 @@ public class UFO_Boss_control : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
+    public void Show_time()
+    {
+        time_txt.text = time_manager.time_remains.ToString();
+    }
+    
 }

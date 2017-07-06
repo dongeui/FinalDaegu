@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Effect_control : MonoBehaviour {
 
-    public GameObject[] effects;
-    
+    public GameObject[] effects;    
 
 
     public void Show_effect(int index)
@@ -35,5 +34,15 @@ public class Effect_control : MonoBehaviour {
     public void Set_transform(int index, Vector3 position)
     {
         effects[index].transform.position = position;
+    }
+
+
+    public void Set_loop_All(int index)
+    {
+        effects[index].GetComponent<ParticleSystem>().loop = true;
+        for (int i=0;i< effects[index].transform.childCount; i++)
+        {
+            effects[index].transform.GetChild(i).GetComponent<ParticleSystem>().loop = true;
+        }
     }
 }

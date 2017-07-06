@@ -44,6 +44,7 @@ public class Player_attack : MonoBehaviour {
             Player_ani.Instance.Attack_anim();
             state_weapon = string.Empty;
             StartCoroutine(move(weapon_now, Vector3.right, 30f));
+            weapon_holder.DetachChildren();
             effect_control.Hide_effect(1);
         }
 

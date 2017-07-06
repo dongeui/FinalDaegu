@@ -7,9 +7,10 @@ public class UFO_Start_spwan : MonoBehaviour {
     public bool IsPossible;
     public float time;    
     public GameObject Bonecrab;
-    public GameObject[] weapon;
+    public GameObject effect;
+    public GameObject[] weapon;    
     private Animator animator;
-
+    public Transform pos;
     UFO_Boss_ani ani;
     public static UFO_Start_spwan Instance;
 
@@ -84,5 +85,12 @@ public class UFO_Start_spwan : MonoBehaviour {
             animator.SetBool("IsAlive", false);
             yield return null;
         }
+    }
+
+    public void Create_effect()
+    {
+        GameObject obj = Instantiate(effect);
+        obj.transform.position = pos.position + new Vector3(Random.Range(-3, 3), Random.Range(-3, 3), Random.Range(-3, 3));
+        obj.SetActive(true);
     }
 }

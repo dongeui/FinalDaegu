@@ -22,4 +22,5 @@ public class UFO_Boss_ani : MonoBehaviour
     {
         animator.SetTrigger("Damaged");
     }
+    
 }

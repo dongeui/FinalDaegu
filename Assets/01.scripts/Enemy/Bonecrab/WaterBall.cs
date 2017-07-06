@@ -8,6 +8,7 @@ public class WaterBall : MonoBehaviour {
     public int attackPoint;
     public float speed;
     public bool IsAlive;
+    public float lifetime;
 
 
     private void Awake()
@@ -19,7 +20,6 @@ public class WaterBall : MonoBehaviour {
     // Use this for initialization
     void Start () {
         hitEffect = gameObject.transform.FindChild("WaterBall_hit").gameObject;
-
     }
 	
 	// Update is called once per frame
@@ -49,7 +49,6 @@ public class WaterBall : MonoBehaviour {
             Destroy(gameObject.transform.GetChild(0).gameObject);
             transform.DetachChildren();
             Destroy(gameObject);
-
 
             Player_damaged.Instance.Damaged(attackPoint);
         }
