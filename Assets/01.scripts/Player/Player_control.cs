@@ -3,38 +3,33 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-public class Player_control : MonoBehaviour {
-
-
+public class Player_control : MonoBehaviour
+{
     static public Player_control Instance;
 
-    GameObject path;
-    Path_control path_control;
+    private GameObject path;
+    private Path_control path_control;
 
     public string now_Track;
     public string pre_Track;
     public bool Isjumping = false;
     public bool IsAlive = true;
     public bool IsImmortal = false;
-    
-    
 
     private void Awake()
-    {        
+    {
         Init_Player();
-        Instance = this;        
+        Instance = this;
     }
-
 
     private void Start()
     {
         path = GameObject.FindWithTag("Path");
         path_control = path.GetComponent<Path_control>();
     }
-   
 
     //변수 초기화
-    void Init_Player()
+    private void Init_Player()
     {
         now_Track = "Track01";
         pre_Track = "Track01";
@@ -84,7 +79,9 @@ public class Player_control : MonoBehaviour {
         //점프를 하고 있으니, 이에 맞는 애니메이션을 실행
         Player_ani.Instance.Jump_anim();
         Isjumping = true;
-        
+
+        //점프소리 재생
+        Player_Audio.Instance.JumpSound();
     }
 
     //플레이어가 점프를 시작해서 회전하기 시작
@@ -95,7 +92,7 @@ public class Player_control : MonoBehaviour {
             Turn_left();
 
         //트랙 2에서 트랙 1로 넘어가는 중이다.
-        else if(pre_Track == "Track02")
+        else if (pre_Track == "Track02")
             Turn_right();
     }
 
@@ -110,8 +107,8 @@ public class Player_control : MonoBehaviour {
         else if (pre_Track == "Track02")
             Turn_left();
     }
-    
-    void Turn_left()
+
+    private void Turn_left()
     {
         Debug.Log("왼쪽 회전");
         Sequence mySequence = DOTween.Sequence();
@@ -119,14 +116,13 @@ public class Player_control : MonoBehaviour {
         mySequence.Join(gameObject.transform.DORotate(rot, 0.15f));
     }
 
-    void Turn_right()
+    private void Turn_right()
     {
         Debug.Log("오른쪽 회전");
         Sequence mySequence = DOTween.Sequence();
         Vector3 rot = (gameObject.transform.localRotation.eulerAngles + new Vector3(0f, 90f, 0));
         mySequence.Join(gameObject.transform.DORotate(rot, 0.15f));
     }
-
 
     private void OnTriggerEnter(Collider other)
     {
@@ -138,7 +134,6 @@ public class Player_control : MonoBehaviour {
             {
                 now_Track = "Track01";
             }
-
             else if (other.gameObject.tag == "Track02")
             {
                 now_Track = "Track02";
@@ -148,11 +143,11 @@ public class Player_control : MonoBehaviour {
             Player_ani.Instance.animator.SetBool("IsJumping", false);
             Debug.Log("현재 달리고 있는 트랙 : " + now_Track);
 
-            if(now_Track!= pre_Track)
+            if (now_Track != pre_Track)
             {
                 Turn_end();
             }
-        }        
+        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -166,22 +161,19 @@ public class Player_control : MonoBehaviour {
                 pre_Track = "Track01";
                 now_Track = string.Empty;
             }
-
             else if (other.gameObject.tag == "Track02")
             {
                 pre_Track = "Track02";
                 now_Track = string.Empty;
             }
-            
-            Debug.Log("현재 탈출한 트랙 : " + other.gameObject.tag);
 
+            Debug.Log("현재 탈출한 트랙 : " + other.gameObject.tag);
 
             if (now_Track != pre_Track)
             {
                 Turn_start();
             }
         }
-
     }
 
     public void PlayerIsDead()
@@ -191,5 +183,4 @@ public class Player_control : MonoBehaviour {
         GetComponent<Rigidbody>().isKinematic = true;
         Player_ani.Instance.Die_anim();
     }
-
 }

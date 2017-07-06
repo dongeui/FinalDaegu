@@ -21,7 +21,6 @@ public class Item_control : MonoBehaviour
         }
     }
 
-
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("동전이 무언가와 부딪힘");
@@ -30,7 +29,8 @@ public class Item_control : MonoBehaviour
         {
             case "Player":
                 print("플레이어와 충돌");
-
+                //코인사운드재생
+                Coin_Audio.Instance.CoinSound();
                 if (this.gameObject.tag == "SilverCoin")
                 {
                     print("실버당!!!");

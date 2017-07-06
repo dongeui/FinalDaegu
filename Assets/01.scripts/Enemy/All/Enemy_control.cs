@@ -13,7 +13,6 @@ public class Enemy_control : MonoBehaviour
     public Collider[] colls;
     public Enemy_attack enemy_attack;
     public Effect_control effect_control;
-    
 
     private void Awake()
     {
@@ -37,7 +36,7 @@ public class Enemy_control : MonoBehaviour
         StartCoroutine(Move());
     }
 
-    IEnumerator Move()
+    private IEnumerator Move()
     {
         Debug.Log("움직임 : " + gameObject.name);
 
@@ -49,10 +48,13 @@ public class Enemy_control : MonoBehaviour
         Debug.Log("멈췄다 : " + gameObject.name);
     }
 
-    IEnumerator FlyAway()
+    private IEnumerator FlyAway()
     {
         Debug.Log("맞아서 날아간다!!!");
         Vector3 vec = new Vector3(Random.Range(5, 20), Random.Range(1, 20), 0);
+
+        //죽음소리 재생
+        Enemy_Audio.Instance.EnemySound();
         while (!IsAlive)
         {
             transform.parent.Translate(vec * Time.deltaTime);
@@ -70,7 +72,7 @@ public class Enemy_control : MonoBehaviour
         Check_identity(collision.gameObject);
     }
 
-    void Check_identity(GameObject obj)
+    private void Check_identity(GameObject obj)
     {
         switch (obj.gameObject.tag)
         {
@@ -96,7 +98,7 @@ public class Enemy_control : MonoBehaviour
     public void Enemy_hit_player(GameObject player)
     {
         IsAlive = false;
-        for (int i = 0; i<colls.Length;i++)
+        for (int i = 0; i < colls.Length; i++)
         {
             colls[i].isTrigger = true;
         }
@@ -138,10 +140,6 @@ public class Enemy_control : MonoBehaviour
         else
         {
             ani.Enemy_hit_anim();
-            
         }
-    }  
-
-    
-    
+    }
 }
