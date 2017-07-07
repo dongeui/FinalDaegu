@@ -46,6 +46,7 @@ public class Player_attack : MonoBehaviour {
             StartCoroutine(move(weapon_now, Vector3.right, 30f));
             weapon_holder.DetachChildren();
             effect_control.Hide_effect(1);
+            effect_control.effects[1].transform.SetParent(weapon_holder);
         }
 
         //무기를 갖고 있지 않음.
@@ -161,7 +162,7 @@ public class Player_attack : MonoBehaviour {
             target.transform.parent.Translate(dir * speed * Time.deltaTime);
             yield return null;
 
-            if (time > 3f)
+            if (time > 1.5f)
             {
                 loop = false;
             }            

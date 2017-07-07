@@ -40,9 +40,9 @@ public class A10 : MonoBehaviour
         mySequence.Append(obj.transform.DOLocalMove(target.position, time));
         StartCoroutine(Effect_start(time));
         //폭파소리재생
-        Enemy_Audio.Instance.BombSouond();
+        GetComponent<Enemy_Audio>().BombSouond();
         //게임오버소리재생
-        Enemy_Audio.Instance.GameOverSound();
+        GetComponent<Enemy_Audio>().GameOverSound();
     }
 
     private IEnumerator Effect_start(float time)

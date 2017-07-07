@@ -52,7 +52,7 @@ public class UFO_Start_spwan : MonoBehaviour
         if (rnd < 5)
         {
             int index = Random.Range(0, weapon.Length);
-            Instantiate(weapon[index], gameObject.transform.GetChild(0).position + Vector3.down * 4.5f, Quaternion.Euler(0, 0, 0));
+            Instantiate(weapon[index], gameObject.transform.GetChild(0).position + Vector3.down * 3.5f, Quaternion.Euler(0, 0, 0));
         }
         else
         {
@@ -88,5 +88,6 @@ public class UFO_Start_spwan : MonoBehaviour
         GameObject obj = Instantiate(effect);
         obj.transform.position = pos.position + new Vector3(Random.Range(-3, 3), Random.Range(-3, 3), Random.Range(-3, 3));
         obj.SetActive(true);
+        GetComponentInChildren<Enemy_Audio>().Bosshit();
     }
 }

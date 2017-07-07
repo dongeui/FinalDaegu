@@ -96,7 +96,7 @@ public class Enemy_control : MonoBehaviour
     public void Enemy_hit_player(GameObject player)
     {
         //죽음소리 재생
-        Enemy_Audio.Instance.EnemySound();
+        GetComponent<Enemy_Audio>().EnemySound();
         IsAlive = false;
         for (int i = 0; i < colls.Length; i++)
         {
@@ -112,7 +112,7 @@ public class Enemy_control : MonoBehaviour
     public void Enemy_damage_check(GameObject obj)
     {
         //죽음소리 재생
-        Enemy_Audio.Instance.EnemySound();
+        GetComponent<Enemy_Audio>().EnemySound();
         //부딪힌 무기를 관리하는 클래스를 참조한다
         Weapon weapon = obj.GetComponentInChildren<Weapon>();
         Debug.Log("무기와 부딪힘");

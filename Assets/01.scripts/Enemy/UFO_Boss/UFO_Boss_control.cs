@@ -8,6 +8,7 @@ public class UFO_Boss_control : MonoBehaviour
 {
     public float BossLife = 100f;
     private UFO_Start_spwan start_spwan;
+    public GameObject txt;
     public Text time_txt;
     public ParticleSystem HitEffect;
     public float speed;
@@ -28,12 +29,17 @@ public class UFO_Boss_control : MonoBehaviour
         Track_boss = "Track01";
         IsImmortal = true;
         effect_control = GetComponent<Effect_control>();
+        
     }
 
     public void Start()
     {
+        txt = GameObject.FindWithTag("txtForBOSS");
+        time_txt = txt.GetComponent<Text>();
+
+
         start_spwan = GetComponentInParent<UFO_Start_spwan>();
-        time_txt.gameObject.SetActive(true);
+        time_txt.text = "Boss is comming!!!";
         StartCoroutine(Check_player());
     }
 
@@ -137,33 +143,45 @@ public class UFO_Boss_control : MonoBehaviour
             effect_control.effects[0].transform.position = other.transform.position;
             effect_control.Show_effect(0);
 
+            //보스피격소리
+            GetComponent<Enemy_Audio>().Bosshit();
+
+
             //체력이 떨어 져서 사망...
             if (BossLife <= 0)
             {
                 //게임이겼다는 소리 사운드
-                Enemy_Audio.Instance.GameWinSound();
+                GetComponent<Enemy_Audio>().GameWinSound();
+//                Enemy_Audio.Instance.GameWinSound();
                 UI_control.Instance.ScoreUpdate(1000);
+
+
+
                 Destroy(gameObject.transform.parent.gameObject, 5f);
                 IsAlive = false;
-                UFO_Start_spwan.Instance.Boss_Die();
 
-                /*
-                effect_control.effects[0].transform.SetParent(bossPos[0].transform);
-                effect_control.effects[0].transform.localPosition = Vector3.zero;*/
-                //effect_control.effects[0].transform.position = bossPos[0].transform.position;
+                time_manager.StopAllCoroutines();
+
+                UFO_Start_spwan.Instance.Boss_Die();
+                Player_control.Instance.Victory();
+
+                GameObject[] objs = GameObject.FindGameObjectsWithTag("enemy_holder");
+                for (int i = 0; i < objs.Length; i++)
+                {
+                    Destroy(objs[i]);
+                }
             }
+
 
             //죽지는 않고 데미지만 입었다. 임시 무적
             else
             {
                 Debug.Log("보스가 아파합니다.");
-                //보스피격소리
-                Enemy_Audio.Instance.Bosshit();
                 UFO_Boss_ani.Instance.Damaged();
             }
 
             //보스와 부딫힌 무기는 사망...?
-            weapon.coll.enabled = false;
+           // weapon.coll.enabled = false;
         }
     }
 

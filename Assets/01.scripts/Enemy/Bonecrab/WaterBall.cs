@@ -20,6 +20,7 @@ public class WaterBall : MonoBehaviour
     private void Start()
     {
         hitEffect = gameObject.transform.FindChild("WaterBall_hit").gameObject;
+        StartCoroutine(Kill_self(lifetime));
     }
 
     // Update is called once per frame
@@ -31,7 +32,7 @@ public class WaterBall : MonoBehaviour
     {
         while (IsAlive)
         {
-            transform.Translate(Vector3.left * speed * Time.deltaTime);
+            transform.Translate(Vector3.left * speed * Time.deltaTime);            
             yield return null;
         }
     }
@@ -41,18 +42,23 @@ public class WaterBall : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            hitEffect.SetActive(true);
-            Destroy(hitEffect, 2f);
-            gameObject.SetActive(false);
-            Destroy(gameObject.transform.GetChild(0).gameObject);
-            transform.DetachChildren();
+            StartCoroutine(Kill_self());            
 
             //플레이어 피격사운드
-            Player_Audio.Instance.HitSound();
-
-            Destroy(gameObject);
+            Player_Audio.Instance.HitSound();           
 
             Player_damaged.Instance.Damaged(attackPoint);
         }
+    }
+
+    IEnumerator Kill_self(float time = 0)
+    {
+        yield return new WaitForSeconds(time);
+        hitEffect.SetActive(true);
+        Destroy(hitEffect, 2f);
+        gameObject.SetActive(false);
+        Destroy(gameObject.transform.GetChild(0).gameObject);
+        transform.DetachChildren();
+        Destroy(gameObject);
     }
 }

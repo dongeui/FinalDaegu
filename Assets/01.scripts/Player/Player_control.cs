@@ -183,4 +183,11 @@ public class Player_control : MonoBehaviour
         GetComponent<Rigidbody>().isKinematic = true;
         Player_ani.Instance.Die_anim();
     }
+
+    public void Victory()
+    {
+        Player_ani.Instance.Win_anim();
+        IsImmortal = true;
+    }
+
 }

@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class Enemy_Audio : MonoBehaviour
 {
-    public static Enemy_Audio Instance;
     public AudioClip[] EnemyAudio = new AudioClip[5];
     private AudioSource enemy;
 
     private void Awake()
     {
-        Instance = this;
         enemy = GetComponent<AudioSource>();
     }
 
