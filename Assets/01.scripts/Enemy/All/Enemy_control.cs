@@ -53,8 +53,6 @@ public class Enemy_control : MonoBehaviour
         Debug.Log("맞아서 날아간다!!!");
         Vector3 vec = new Vector3(Random.Range(5, 20), Random.Range(1, 20), 0);
 
-        //죽음소리 재생
-        Enemy_Audio.Instance.EnemySound();
         while (!IsAlive)
         {
             transform.parent.Translate(vec * Time.deltaTime);
@@ -97,6 +95,8 @@ public class Enemy_control : MonoBehaviour
     //적이 플레이어와 부딪혔다.
     public void Enemy_hit_player(GameObject player)
     {
+        //죽음소리 재생
+        Enemy_Audio.Instance.EnemySound();
         IsAlive = false;
         for (int i = 0; i < colls.Length; i++)
         {
@@ -111,6 +111,8 @@ public class Enemy_control : MonoBehaviour
     //적이 무기와 부딪혔다.
     public void Enemy_damage_check(GameObject obj)
     {
+        //죽음소리 재생
+        Enemy_Audio.Instance.EnemySound();
         //부딪힌 무기를 관리하는 클래스를 참조한다
         Weapon weapon = obj.GetComponentInChildren<Weapon>();
         Debug.Log("무기와 부딪힘");
@@ -133,6 +135,7 @@ public class Enemy_control : MonoBehaviour
             rigidbody.isKinematic = true;
             ani.Enemy_die_anim();
             StartCoroutine(FlyAway());
+            UI_control.Instance.ScoreUpdate(100);
             Destroy(gameObject.transform.parent.gameObject, 3f);
         }
 

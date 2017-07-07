@@ -64,7 +64,7 @@ public class UI_control : MonoBehaviour
 
     public void SetScore()
     {
-        score_txt.text = score_now.ToString();
+        score_txt.text = " Score : " + score_now.ToString();
     }
 
     public void SetCoinCount()

@@ -5,17 +5,17 @@ using UnityEngine;
 public class Coin_Audio : MonoBehaviour
 {
     public static Coin_Audio Instance;
-    public AudioClip CoinAudio = new AudioClip();
+
+    public AudioSource coin;
 
     private void Awake()
     {
         Instance = this;
+        coin = GetComponent<AudioSource>();
     }
 
     public void CoinSound()
     {
-        AudioSource coin = new AudioSource();
-        coin.clip = CoinAudio;
         coin.Play();
     }
 }

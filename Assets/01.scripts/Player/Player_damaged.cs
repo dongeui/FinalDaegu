@@ -49,8 +49,8 @@ public class Player_damaged : MonoBehaviour
             //데미지 애니메이션 재생
             Player_ani.Instance.Damage_anim();
             effect_control.Show_effect(0);
-            // 피격 사운드 재생
-            Player_Audio.Instance.HitSound();
+            // 피격 사운드 재생 (노필요, 몬스터가 터지는소리로_)
+            // Player_Audio.Instance.HitSound();
             //약간 뒤로 밀리는 모션과 잠시 무적시간 부여
             StopCoroutine(Knockback());
             StartCoroutine(Knockback());

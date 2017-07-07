@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UFO_Start_spwan : MonoBehaviour {
-
+public class UFO_Start_spwan : MonoBehaviour
+{
     public bool IsPossible;
-    public float time;    
+    public float time;
     public GameObject Bonecrab;
     public GameObject effect;
-    public GameObject[] weapon;    
+    public GameObject[] weapon;
     private Animator animator;
     public Transform pos;
-    UFO_Boss_ani ani;
+    private UFO_Boss_ani ani;
     public static UFO_Start_spwan Instance;
 
     private void Awake()
@@ -30,15 +30,14 @@ public class UFO_Start_spwan : MonoBehaviour {
         UFO_Boss_control.Instance.IsImmortal = false;
     }
 
-    IEnumerator Spawn(float time)
+    private IEnumerator Spawn(float time)
     {
         while (IsPossible)
-        {            
+        {
             ani.Spawn();
             yield return new WaitForSeconds(time);
         }
     }
-
 
     //빵개 드롭 x축 자기 밑에 와이영제트영포지션에 빵개 투하
     public void Drop()
@@ -49,19 +48,16 @@ public class UFO_Start_spwan : MonoBehaviour {
 
         int rnd = Random.Range(0, 10);
 
-
         //확률에 의해 무기 드랍
-        if (rnd < 4)
+        if (rnd < 5)
         {
             int index = Random.Range(0, weapon.Length);
             Instantiate(weapon[index], gameObject.transform.GetChild(0).position + Vector3.down * 4.5f, Quaternion.Euler(0, 0, 0));
         }
-
         else
         {
             Instantiate(Bonecrab, gameObject.transform.GetChild(0).position, Quaternion.Euler(0, 0, 0));
         }
-        
     }
 
     public void Boss_Die()
@@ -70,7 +66,7 @@ public class UFO_Start_spwan : MonoBehaviour {
         StartCoroutine(Goto_base());
     }
 
-    IEnumerator Goto_base()
+    private IEnumerator Goto_base()
     {
         Transform child = gameObject.transform.GetChild(0).transform;
         Debug.Log("원래 위치로 돌아가야 한다");
@@ -78,7 +74,7 @@ public class UFO_Start_spwan : MonoBehaviour {
         {
             child.localPosition = Vector3.Lerp(child.localPosition, Vector3.zero, 2f * Time.deltaTime);
 
-            if (Vector3.Distance(child.localPosition, Vector3.zero) <0.1f)
+            if (Vector3.Distance(child.localPosition, Vector3.zero) < 0.1f)
             {
                 child.localPosition = Vector3.zero;
             }
